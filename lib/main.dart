@@ -3,19 +3,17 @@ import 'package:flutter_application/main_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  const String title = 'flutter Demo';
-  runApp(const ProviderScope(child: MyApp(title: title,)));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key, required this.title});
-  final String title;
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: title,
+      title: "Flutter Demo",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
